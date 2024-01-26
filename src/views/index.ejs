@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home</title>
+    <link rel='stylesheet' href='/css/app.css' />
+  </head>
+    <%if(userData.color == "rojo") {%>
+      <body style="background-color: red">
+        <form class="form_div" method="post" action="/form">
+          <label for="nombre">Ingrese su nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+    
+        <label for="color">Seleccione un color:</label>
+        <select id="color" name="color" required>
+          <option value="rojo">Rojo</option>
+          <option value="azul">Azul</option>
+          <option value="verde">Verde</option>
+          <option value="amarillo">Amarillo</option>
+        </select>
+    
+        <label for="email">Ingrese su email:</label>
+        <input type="email" id="email" name="email" required>
+    
+        <label for="edad">Ingrese su edad:</label>
+        <input type="number" id="edad" name="edad">
+        <label for="recuerdame">Guardar color</label>
+        <input type="checkbox" name="recuerdame">
+    
+        <button type="submit">Enviar</button>
+        </form>
+      </body>
+      <%}else if(userData.color == "azul") {%>
+        <body style="background-color: blue"> 
+          <form class="form_div" method="post" action="/form">
+            <label for="nombre">Ingrese su nombre:</label>
+          <input type="text" id="nombre" name="nombre" required>
+      
+          <label for="color">Seleccione un color:</label>
+          <select id="color" name="color" required>
+            <option value="rojo">Rojo</option>
+            <option value="azul">Azul</option>
+            <option value="verde">Verde</option>
+            <option value="amarillo">Amarillo</option>
+          </select>
+      
+          <label for="email">Ingrese su email:</label>
+          <input type="email" id="email" name="email" required>
+      
+          <label for="edad">Ingrese su edad:</label>
+          <input type="number" id="edad" name="edad">
+          <label for="recuerdame">Guardar color</label>
+          <input type="checkbox" name="recuerdame">
+      
+          <button type="submit">Enviar</button>
+          </form>
+        </body>           
+        <%}else if(userData.color == "verde") {%>
+          <body style="background-color: green;"> 
+            <form class="form_div" method="post" action="/form">
+              <label for="nombre">Ingrese su nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+        
+            <label for="color">Seleccione un color:</label>
+            <select id="color" name="color" required>
+              <option value="rojo">Rojo</option>
+              <option value="azul">Azul</option>
+              <option value="verde">Verde</option>
+              <option value="amarillo">Amarillo</option>
+            </select>
+        
+            <label for="email">Ingrese su email:</label>
+            <input type="email" id="email" name="email" required>
+        
+            <label for="edad">Ingrese su edad:</label>
+            <input type="number" id="edad" name="edad">
+            <label for="recuerdame">Guardar color</label>
+            <input type="checkbox" name="recuerdame">
+        
+            <button type="submit">Enviar</button>
+            </form>
+          </body>
+              
+          <%}else if(userData.color == "amarillo") {%>
+            <body style="background-color: yellow;"> 
+              <form class="form_div" method="post" action="/form">
+                <label for="nombre">Ingrese su nombre:</label>
+              <input type="text" id="nombre" name="nombre" required>
+          
+              <label for="color">Seleccione un color:</label>
+              <select id="color" name="color" required>
+                <option value="rojo">Rojo</option>
+                <option value="azul">Azul</option>
+                <option value="verde">Verde</option>
+                <option value="amarillo">Amarillo</option>
+              </select>
+          
+              <label for="email">Ingrese su email:</label>
+              <input type="email" id="email" name="email" required>
+          
+              <label for="edad">Ingrese su edad:</label>
+              <input type="number" id="edad" name="edad">
+              <label for="recuerdame">Guardar color</label>
+              <input type="checkbox" name="recuerdame">
+          
+              <button type="submit">Enviar</button>
+              </form>
+            </body>
+                
+            <% }else{%>
+              <body>
+                <% if (typeof errors != 'undefined'){ %>
+                  <div>
+                  <p>ERROR</p>
+                  <ul>
+                    <% for (let i = 0; i < errors.length; i++) { %>
+                    <li>
+                      <%= errors[i].msg %>
+                    </li>
+                    <% } %>
+                  </ul>
+                  </div>
+                  <% } %>
+                <form class="form_div" method="post" action="/form">
+                  <label for="nombre">Ingrese su nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+            
+                <label for="color">Seleccione un color:</label>
+                <select id="color" name="color" required>
+                  <option value="rojo">Rojo</option>
+                  <option value="azul">Azul</option>
+                  <option value="verde">Verde</option>
+                  <option value="amarillo">Amarillo</option>
+                </select>
+            
+                <label for="email">Ingrese su email:</label>
+                <input type="email" id="email" name="email" required>
+            
+                <label for="edad">Ingrese su edad:</label>
+                <input type="number" id="edad" name="edad">
+                <label for="recuerdame">Guardar color</label>
+                <input type="checkbox" name="recuerdame">
+            
+                <button type="submit">Enviar</button>
+                </form>
+              </body>
+                <% }%>
+
+
+</html>

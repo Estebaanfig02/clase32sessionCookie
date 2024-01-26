@@ -1,0 +1,25 @@
+body {
+
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+a {
+  color: #00B7FF;
+}
+.form_div{
+  margin-top: 200px;
+  text-align: center;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+}
+.form_div input{
+  height: 20px;
+}
+.form_div button{
+  margin-top: 10px;
+  height: 20px;
+}
